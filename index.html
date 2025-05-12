@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Periódico escolar del Colegio Hernando Durán Dussán - Noticias, opiniones, eventos y enlaces útiles.">
+    <title>Periódico Escolar</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- Cabecera -->
+    <header>
+        <h1>Periódico Escolar Colegio Hernando Durán Dussán</h1>
+        <p>Primera edición - mayo de 2025</p>
+        <nav>
+            <ul>
+                <li><a href="#actualidad">Actualidad</a></li>
+                <li><a href="#opiniones">Opinión</a></li>
+                <li><a href="#eventos">Eventos</a></li>
+                <li><a href="#enlaces">Enlaces</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección de Actualidad -->
+    <section id="actualidad">
+        <h2>Últimas Noticias</h2>
+        <article id="contenedor-noticias"></article>
+    </section>
+
+    <!-- Sección de Opiniones -->
+    <section id="opiniones">
+        <h2>Opinión</h2>
+        <article id="contenedor-editorial">
+            
+        </article>
+    </section>
+
+    <!-- Sección de Eventos -->
+    <section id="eventos">
+        <h2>Eventos</h2>
+        <article id="contenedor-eventos"></article>
+    </section>
+
+    <!-- Sección de Enlaces -->
+    <section id="enlaces">
+        <h2>Enlaces Útiles</h2>
+        <ul>
+            <li><a href="https://www.mineducacion.gov.co/" target="_blank" rel="noopener noreferrer">Ministerio de Educación Nacional</a></li>
+            <li><a href="https://www.educacionbogota.edu.co/" target="_blank" rel="noopener noreferrer">Secretaría de Educación de Bogotá</a></li>
+            <li><a href="https://www.colegiohernandoduran.edu.co/" target="_blank" rel="noopener noreferrer">Colegio Hernando Durán Dussán</a></li>
+        </ul>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <form id="form-contacto">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <!-- Sección de Publicación -->
+    <section id="publicar">
+        <h2>Publicar Contenido</h2>
+        
+        <!-- Botón para iniciar sesión -->
+        <button id="boton-login">Iniciar Sesión</button>
+
+        <!-- Campos de usuario y código con opción para mostrar/ocultar -->
+        <label for="codigo">Código de acceso:</label>
+        <input type="password" id="codigo" required>
+        <button type="button" id="toggleCodigo">👁️</button>
+
+        <label for="usuario">Usuario:</label>
+        <input type="password" id="usuario" required>
+        <button type="button" id="toggleUsuario">👁️</button>
+
+        <!-- Mostrar nombre del usuario autenticado -->
+        <p id="usuario-autenticado"></p>
+
+        <!-- Formulario de publicación -->
+        <form id="form-publicar">
+            <label for="autor">Autor de la publicación:</label>
+            <input type="text" id="autor" required>
+
+            <label for="categoria">Categoría:</label>
+            <select id="categoria">
+                <option value="actualidad">Últimas Noticias</option>
+                <option value="editorial">Editorial</option>
+                <option value="eventos-deportivos">Eventos Deportivos</option>
+                <option value="eventos-academicos">Eventos Académicos</option>
+                <option value="eventos-culturales">Eventos Culturales</option>
+            </select>
+
+            <label for="contenido">Contenido:</label>
+            <textarea id="contenido" required></textarea>
+
+           <button type="submit">Enviar</button>
+		<label for="imagen">Subir imagen:</label>
+		<input type="file" id="imagen" accept="image/*">
+
+		<label for="video">Enlace de video (YouTube, etc.):</label>
+		<input type="text" id="video" placeholder="Pega aquí el enlace del video">
+
+        </form>
+
+        <!-- Opciones después de la publicación -->
+        <div id="botones-publicacion">
+            <button id="agregar-publicacion">Agregar</button>
+            <button id="finalizar-publicacion">Finalizar</button>
+        </div>
+    </section>
+
+</body>
+</html>
